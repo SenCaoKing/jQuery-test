@@ -35,14 +35,15 @@
 <br/>
 <button>点击：add传递元素标签</button>
 <button>点击：add传递html结构</button>
+
 <script src="../jquery-2.1.1.js"></script>
 <script type="text/javascript">
-    $('button:first').click(function(){
+    $("button:first").click(function(){
         // 把p元素加到 li 合集中
         $('li').add('p').css('background', 'red');
     });
 
-    $('button:last').click(function(){
+    $("button:last").click(function(){
         // 把html结构 '<p>新的元素p</p>' 加入到 li 的合集中，为了能够在页面上显示，需要再重新 appendTo 要指定的节点处
         // 值得注意：整个结构位置都改变了
         $('li').add('<p>新的元素p</p>').appendTo($('.right'));
