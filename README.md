@@ -1,2 +1,1 @@
-# jQuery-test
-jQuery练习
+## Sen目录下为慕课jQuery练习
