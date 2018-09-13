@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find 方法</title>
+    <style type="text/css">
+        .left{
+            width: auto;
+            height: 200px;
+        }
+        .left div{
+            width: 150px;
+            height: 70px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            background: gray;
+            border: 1px solid #ccc;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="left first-div">
+    <div class="div">
+        <ul class="level-1">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+        </ul>
+    </div>
+
+    <div class="div">
+        <ul class="level-2">
+            <li class="item-1">1</li>
+            <li class="item-2 test">2</li>
+            <li class="item-3">3</li>
+        </ul>
+    </div>
+
+    <div class="div">
+        <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+        </ul>
+    </div>
+</div>
+<button>点击：find传递表达式</button>
+<br/>
+<br/>
+
+<div style="border: 1px solid red;">
+    <p>
+        <span>测试1</span>
+        <a>测试2</a>
+    </p>
+
+    <p>
+        <span>Sen01</span>
+        <a>Sen02</a>
+    </p>
+
+    <div>
+        <span>young1</span>
+        <a>young2</a>
+    </div>
+</div>
+<br/>
+<br/>
+<button>点击：find传递 $ 对象</button>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 在 class="left" 的元素中，找到后代元素 li 中的最后一个，并加上蓝色的边框
+    $("button:first").click(function(){
+        $('.left').find('li:last').css('border', '1px solid red');
+    });
+
+    $("button:last").click(function(){
+        // 找到所有 p 元素，然后筛选出子元素是 span 标签的节点，改变其字体颜色
+        var $spans = $('span');
+        $("p").find($spans).css('color', 'red');
+    });
+</script>
+</body>
+</html>
