@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each 方法</title>
+    <style type="text/css">
+        .left{
+            width: auto;
+            height: 150px;
+        }
+        .left div{
+            width: 150px;
+            height: 120px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            background: gray;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="left first-div">
+    <div class="div">
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+    </div>
+
+    <div class="div">
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+        </ul>
+    </div>
+</div>
+
+<br/>
+<button>点击：each方法遍历元素</button>
+<button>点击：each方法回调判断</button>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $("button:first").click(function(){
+        // 遍历所有的 li ，修改每个 li 内的字体颜色
+        $('li').each(function(index, element){
+            $(this).css('color', 'red');
+        });
+    });
+
+    $("button:last").click(function(){
+        // 遍历所有的 li ，修改偶数 li 内的字体颜色
+        $('li').each(function(index, element){
+            if(index % 2){
+                $(this).css('color', 'orange');
+            }
+        });
+    });
+</script>
+</body>
+</html>
