@@ -9,3 +9,7 @@
 ## find.html find方法
 
 ## next.html next方法
+
+## parent.html parent方法
+
+## parents.html parents方法
