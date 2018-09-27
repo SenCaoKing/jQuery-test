@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>submit事件</title>
+    <style type="text/css">
+        .left div,
+        .right div{
+            width: 500px;
+            height: 50px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+        }
+        .left div{
+            background: #bbffaa;
+        }
+        .right div{
+            background: yellow;
+        }
+        select{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<h2>submit</h2>
+<div class="left">
+    <div class="aaron">
+        <form id="target2" action="destination.html">
+            回车键或者点击提交表单，禁止浏览器默认跳转：
+            <input type="text" value="输入新的值" />
+            <input type="submit" value="Go" />
+        </form>
+    </div>
+
+    <div class="aaron">
+        <form id="target1" action="test.html">
+            回车键或者点击提交表单：
+            <input type="text" value="输入新的值" />
+            <input type="submit" value="Go" />
+        </form>
+    </div>
+</div>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 回车键或者点击提交表单
+    $('#target1').submit(function(e){
+        alert('捕获提交表单动作，不阻止页面跳转');
+    });
+
+    // 回车键或者点击提交表单，禁止浏览器默认跳转
+    $('#target2').submit(function(){
+        alert('捕获提交表单动作，阻止页面跳转');
+        return false;
+    });
+</script>
+</body>
+</html>
