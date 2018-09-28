@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>unwrap方法</title>
+    <style type="text/css">
+        .left,
+        .right{
+            width: 300px;
+            height: 120px;
+        }
+        .left div,
+        .right div{
+            width: 100px;
+            height: 90px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+        }
+        .left div{
+            background: #bbffaa;
+        }
+        .right div{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h2>DOM删除unwrap()方法</h2>
+<div class="left">
+    <div class="aaron">点击：通过jQuery的unwrap删除p元素的父元素div</div>
+</div>
+
+<div class="right">
+    <div class="aaron"><p class="test1">测试unwrap</p></div>
+</div>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $(".left .aaron:first").on('click', function(){
+        $('p').unwrap();
+    });
+</script>
+</body>
+</html>
