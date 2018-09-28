@@ -7,3 +7,5 @@
 ## detach-and-remove.html detach()和remove()区别
 
 ## wrap.html DOM包裹wrap()方法
+
+## wrapAll.html DOM包裹wrapAll()方法
