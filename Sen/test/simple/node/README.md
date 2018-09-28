@@ -3,3 +3,5 @@
 ## createNodeAndAttr.html jQuery节点创建与属性的处理
 
 ## detach.html detach()的有参用法和无参用法
+
+## detach-and-remove.html detach()和remove()区别
