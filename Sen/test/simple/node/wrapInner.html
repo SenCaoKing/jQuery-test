@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wrapInner方法</title>
+    <style type="text/css">
+        .left,
+        .right{
+            width: 250px;
+            height: 120px;
+        }
+        .left div,
+        .right div{
+            width: 100px;
+            height: 120px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+            background: #bbffaa;
+        }
+        .right div{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h2>DOM包裹wrapInner()方法</h2>
+<div class="left">
+    <div class="aaron1">点击，通过wrapInner方法给所有p元素增加内部父容器div</div>
+    <div class="aaron2">点击，通过wrapInner的回调方法给每个a元素增加内部父容器div</div>
+</div>
+
+<div class="right">
+    <p>p元素</p>
+    <p>p元素</p>
+</div>
+
+<div class="left">
+    <a>a元素</a>
+    <a>a元素</a>
+</div>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $(".aaron1").on('click', function(){
+        // 给所有 p 元素，增加内部包裹父容器 div
+        $('p').wrapInner('<div></div>');
+    });
+
+    $(".aaron2").on('click', function(){
+        // wrapInner 接受一个回调函数
+        // 每一次遍历 this 都指向了合集中每一个 a 元素
+        $('a').wrapInner(function(){
+            return '<div></div>';
+        });
+    });
+</script>
+</body>
+</html>

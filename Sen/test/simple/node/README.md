@@ -9,3 +9,5 @@
 ## wrap.html DOM包裹wrap()方法
 
 ## wrapAll.html DOM包裹wrapAll()方法
+
+## wrapInner.html DOM包裹wrapInner()方法
