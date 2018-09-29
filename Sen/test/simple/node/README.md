@@ -13,3 +13,5 @@
 ## wrapInner.html DOM包裹wrapInner()方法
 
 ## unwrap.html DOM删除unwrap()方法
+
+## clone.html DOM拷贝clone()方法
