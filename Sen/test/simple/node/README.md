@@ -17,3 +17,5 @@
 ## clone.html DOM拷贝clone()方法
 
 ## replaceWith-and-replaceAll.html DOM替换replaceWith()和replaceAll()
+
+## empty.html empty的基本用法
