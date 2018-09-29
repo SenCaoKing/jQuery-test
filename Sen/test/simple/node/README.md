@@ -23,3 +23,5 @@
 ## remove.html remove()有参用法和无参用法
 
 ## empty-and-remove.html empty和remove区别
+
+## append-and-appendTo.html 内部插入append()与appendTo()
