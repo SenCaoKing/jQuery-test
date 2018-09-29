@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>remove()有参用法和无参用法</title>
+    <style type="text/css">
+        .test1 {
+            background: #bbffaa;
+        }
+        .test2{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h2>remove()用法</h2>
+<div class="test1">
+    <p>p元素1</p>
+    <p>p元素2</p>
+</div>
+<div class="test2">
+    <p>p元素3</p>
+    <p>p元素4</p>
+</div>
+<button>点击通过jQuery的remove移除元素</button>
+<button>点击通过jQuery的remove移除指定元素</button>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $("button:first").on('click', function(){
+        // 删除整个 class=test1 的 div 节点
+        $(".test1").remove();
+    });
+
+    // 找到所有 p 元素中，包含了4的元素
+    // 这个也是一个过滤器的处理
+    $("button:last").on('click', function(){
+        $("p").remove(":contains('4')");
+    });
+</script>
+</body>
+</html>
