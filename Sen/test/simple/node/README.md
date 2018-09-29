@@ -27,3 +27,5 @@
 ## append-and-appendTo.html 内部插入append()与appendTo()
 
 ## prepend-and-prependTo.html 内部插入prepend()与prependTo()
+
+## before-and-after.html 外部插入before()与after()
