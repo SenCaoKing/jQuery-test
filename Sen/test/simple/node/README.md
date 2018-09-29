@@ -15,3 +15,5 @@
 ## unwrap.html DOM删除unwrap()方法
 
 ## clone.html DOM拷贝clone()方法
+
+## replaceWith-and-replaceAll.html DOM替换replaceWith()和replaceAll()
