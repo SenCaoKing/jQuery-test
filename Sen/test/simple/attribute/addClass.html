@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addClass方法</title>
+    <style type="text/css">
+        .left,
+        .right{
+            width: 300px;
+            height: 120px;
+        }
+        .left div,
+        .right div{
+            width: 100px;
+            height: 90px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+        }
+        .newClass{
+            background: #bbffaa;
+        }
+        .senClass{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<h2>addClass()方法</h2>
+<div class="left">
+    <div class="aaron">
+        <p>newClass</p>
+    </div>
+    <div class="aaron">
+        <p>newClass</p>
+    </div>
+</div>
+
+<div class="right">
+    <div class="aa bb sen">
+        <article>
+            <p>senClass</p>
+        </article>
+    </div>
+    <div class="bb cc sen">
+        <article>
+            <p>senClass</p>
+        </article>
+    </div>
+</div>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // class=left 下 div 元素增加一个新的样式，增加背景颜色
+    $('.left div').addClass('newClass');
+
+    // 通过 className(function) 方法
+    // 这个函数返回一个或更多用空格隔开的要增加的样式名。
+    // 接收 index 参数表示元素在匹配集合中的索引位置和 html 参数表示元素上原来的 HTML 内容
+
+    // 找到所有的 div，然后通过 addClass 设置颜色，根据返回的 className 的判断，
+    $("div").addClass(function(index, className){
+
+        // 找到类名中包含了 sen 的元素
+        if(-1 !== className.indexOf('sen')){
+            // this 指向匹配元素集合中的当前元素
+            $(this).addClass('senClass');
+        }
+    });
+</script>
+</body>
+</html>
