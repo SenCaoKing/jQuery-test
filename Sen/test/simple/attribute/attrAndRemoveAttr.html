@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr()与removeAttr()方法</title>
+    <style type="text/css">
+        input{
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            background: #bbffaa;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<h2>attr()与removeAttr()方法</h2>
+<form>
+    <input type="text" value="" />
+    <input type="text" value="获取value" />
+    <input type="text" value="第三个input" />
+    <input type="text" value="删除value属性" />
+</form>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 找到第一个 input，通过 attr 设置属性 value 的值
+    $("input:first").attr('value', '.attr( attributeName, value )');
+
+    // 找到第二个 input，通过 attr 获取属性 value 的值
+    $("input:eq(1)").attr('value');
+
+    // 找到第三个 input，通过使用一个函数来设置属性
+    // 可以根据该元素上的其它属性值返回最终所需的属性值
+    // 例如，我们可以把新的值与现有的值联系在一起：
+    $("input:eq(2)").attr('value', function(i, val){
+        return '通过function设置' + val;
+    });
+
+    // 找到第四个 input，通过使用 removeAttr 删除属性
+    $("input:eq(3)").removeAttr('value');
+</script>
+</body>
+</html>
