@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css()与addClass()设置样式的区别</title>
+    <style type="text/css">
+        .left,
+        .right{
+            width: 300px;
+            height: 120px;
+        }
+        .left div,
+        .right div{
+            width: 200px;
+            height: 90px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+        }
+        a{
+            font-size: 14px;
+            display: block;
+        }
+        .newClass{
+            background: #bbffaa;
+        }
+        .senClass{
+            background: red;
+        }
+        .addBorder{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<h2>css()与addClass()方法的区别</h2>
+<div class="left">
+    <div class="aaron">
+        <a>css优先级高于addClass</a>
+        <a>1：第一次addClass背景色</a>
+        <a>2：第二次css修改背景色</a>
+    </div>
+</div>
+<div class="right">
+    <div class="aa bb sen">
+        <article>
+            <a>Sen</a>
+        </article>
+    </div>
+</div>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 给所有的 div 统一增加边宽
+    $('div').addClass('addBorder');
+
+    // class=left 下 div 元素增加一个新的样式，增加背景颜色
+    $('.aaron').addClass('newClass');
+
+    // 通过 css 覆盖 addClass 方式设置背景色
+    $('.aaron').css({
+        'background' : 'yellow'
+    });
+</script>
+</body>
+</html>
