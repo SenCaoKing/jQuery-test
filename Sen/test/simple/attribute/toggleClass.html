@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toggleClass()方法</title>
+    <style type="text/css">
+        body,
+        table,
+        td{
+            font-family: Arial, Helvetica, Sans-Serif;
+            font-size: 12px;
+        }
+        .h{
+            background: #f3f3f3;
+            color: #000;
+        }
+        .c{
+            background: #ebebeb;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<h2>toggleClass()方法</h2>
+
+<h4>toggleClass(className)和toggleClass(className, switch)</h4>
+<table id="table" width="50%" border="0" cellpadding="3" cellspacing="1">
+    <tr>
+        <td>Sen is a good man</td>
+        <td>Sen is a good man</td>
+    </tr>
+    <tr>
+        <td>Sen is a good man</td>
+        <td>Sen is a good man</td>
+    </tr>
+    <tr>
+        <td>Sen is a good man</td>
+        <td>Sen is a good man</td>
+    </tr>
+    <tr>
+        <td>Sen is a good man</td>
+        <td>Sen is a good man</td>
+    </tr>
+    <tr>
+        <td>Sen is a good man</td>
+        <td>Sen is a good man</td>
+    </tr>
+</table>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 给所有的 tr 元素加一个 class="c" 的样式
+    $("#table tr").toggleClass("c");
+
+
+
+    // 给所有的偶数 tr 元素切换 class="c" 的样式
+    // 所有奇数的样式保留，偶数的被删除
+    $("#table tr:odd").toggleClass("c");
+
+
+
+    // 第二个参数判断样式类是否应该被添加或删除
+    // true，那么这个样式类将被添加；
+    // false，那么这个样式类将被移除
+    // 所有的奇数 tr 元素，应该都保留 class="c" 样式
+    $("#table tr:even").toggleClass("c", true);
+</script>
+</body>
+</html>

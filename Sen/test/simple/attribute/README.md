@@ -7,3 +7,5 @@
 ## cssAndAddClass.html css()与addClass()设置样式的区别
 
 ## removeClass.html removeClass()方法
+
+## toggleClass.html toggleClass()方法
