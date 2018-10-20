@@ -9,3 +9,5 @@
 ## removeClass.html removeClass()方法
 
 ## toggleClass.html toggleClass()方法
+
+## val.html val()方法

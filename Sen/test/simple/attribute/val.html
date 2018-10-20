@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>val()方法</title>
+    <style type="text/css">
+        p{
+            color: red;
+            margin: 4px;
+        }
+        b{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+<h2>val()方法</h2>
+
+<select id="single">
+    <option>思否网</option>
+    <option>博客园</option>
+</select>
+<select id="multiple" multiple="multiple">
+    <option selected="selected">CSDN</option>
+    <option>思否网</option>
+    <option selected="selected">博客园</option>
+</select>
+<input type="text" value="click a button" />
+<p></p>
+<span></span>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 单个 select，返回第一个
+    $("p").text( $("#single").val() );
+    // $("p").text( $("#single").children(':first').html() );
+</script>
+
+<script type="text/javascript">
+    // 多个 select 被选择，返回 ["CSDN", "博客园"]
+    $("span").text( $("#multiple").val() );
+</script>
+
+<script type="text/javascript">
+    // 选择一个表单，修改 value 的值
+    $("input[type='text']").val('修改表单的字段');
+</script>
+
+</body>
+</html>
