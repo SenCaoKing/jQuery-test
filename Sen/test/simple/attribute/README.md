@@ -11,3 +11,5 @@
 ## toggleClass.html toggleClass()方法
 
 ## val.html val()方法
+
+## htmlAndText.html html()及text()方法

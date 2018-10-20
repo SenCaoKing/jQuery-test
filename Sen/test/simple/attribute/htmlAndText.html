@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html()及text()方法</title>
+    <style type="text/css">
+        .left{
+            width: auto;
+            height: 120px;
+        }
+        
+        .left div{
+            width: 150px;
+            height: 70px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            background: #bbffaa;
+            border: 1px solid #ccc;
+        }
+        
+        a,p{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h2>html()及text()方法</h2>
+
+<div class="left first-div">
+    <div class="div">
+        <a>:first-child</a>
+        <a>第二个元素</a>
+        <a>:last-child</a>
+    </div>
+
+    <div class="div">
+        <a>:first-child</a>
+        <a>第二个元素</a>
+        <a>:last-child</a>
+    </div>
+</div>
+
+<h4>显示通过html方法获取到的内容</h4>
+<p></p>
+
+<h4>显示通过text方法获取到的内容</h4>
+<p></p>
+
+<script src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    // 显示出 html 方法获取到的内容
+    // html() 是整个 html 文档结构
+    $('p:first').text( $(".first-div").html() );
+
+    // 显示出 text 方法获取到的内容
+    // text() 是文本内容的合集
+    $('p:last').text( $(".first-div").text() );
+</script>
+
+<script type="text/javascript">
+    // 通过 text() 方法替换文本内容
+    $(".left a:first").text('替换第一个 a 元素的内容');
+</script>
+
+<script type="text/javascript">
+    // 通过 html() 方法替换 html 结构
+    $(".left div:first").html('整个div的子节点都被替换了');
+</script>
+<!-- HTML 结构已经修改 -->
+<script type="text/javascript">
+    // 通过 text() 的回调，获取原本的内容，修改，再重新赋值
+    $(".left a:first").text(function(index, text){
+        return '增加新的文本内容' + text;
+    });
+</script>
+
+</body>
+</html>
